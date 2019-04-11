@@ -9,7 +9,7 @@ def readfile(name):
 readme = readfile('README.rst')
 changes = readfile('CHANGES.rst')
 
-requires = ['zope.interface']
+requires = ['zope.interface', 'venusian']
 
 docs_require = ['Sphinx', 'pylons-sphinx-themes']
 
