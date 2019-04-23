@@ -11,14 +11,17 @@ changes = readfile('CHANGES.rst')
 
 requires = ['zope.interface', 'venusian']
 
-docs_require = ['Sphinx', 'pylons-sphinx-themes']
+docs_require = ['Sphinx', 'sphinx_rtd_theme']
 
 tests_require = ['pytest', 'pytest-cov']
 
 setup(
     name='wired',
-    description='An inversion-of-control (IoC) container for building decoupled, configurable, pluggable applications.',
-    version='0.1.2',
+    description=(
+        'An inversion-of-control (IoC) container for building decoupled, '
+        'configurable, pluggable applications.'
+    ),
+    version='0.2',
     long_description=readme + '\n\n' + changes,
     author='Michael Merickel',
     author_email='pylons-discuss@googlegroups.com',
@@ -29,7 +32,6 @@ setup(
     python_requires='>=3.4',
     install_requires=requires,
     extras_require={'docs': docs_require, 'testing': tests_require},
-    test_suite='tests',
     zip_safe=False,
     keywords=','.join(
         [
